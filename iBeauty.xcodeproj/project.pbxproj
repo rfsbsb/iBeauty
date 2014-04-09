@@ -22,6 +22,7 @@
 		5A6CA85318F4E33A0099E21E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6CA83218F4E3390099E21E /* UIKit.framework */; };
 		5A6CA85B18F4E33A0099E21E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CA85918F4E33A0099E21E /* InfoPlist.strings */; };
 		5A6CA85D18F4E33A0099E21E /* iBeautyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CA85C18F4E33A0099E21E /* iBeautyTests.m */; };
+		5A6CA86818F4E92D0099E21E /* GTAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CA86718F4E92D0099E21E /* GTAddViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		5A6CA85818F4E33A0099E21E /* iBeautyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iBeautyTests-Info.plist"; sourceTree = "<group>"; };
 		5A6CA85A18F4E33A0099E21E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5A6CA85C18F4E33A0099E21E /* iBeautyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iBeautyTests.m; sourceTree = "<group>"; };
+		5A6CA86618F4E92D0099E21E /* GTAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAddViewController.h; sourceTree = "<group>"; };
+		5A6CA86718F4E92D0099E21E /* GTAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAddViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				5A6CA84418F4E33A0099E21E /* GTMasterViewController.m */,
 				5A6CA84618F4E33A0099E21E /* GTDetailViewController.h */,
 				5A6CA84718F4E33A0099E21E /* GTDetailViewController.m */,
+				5A6CA86618F4E92D0099E21E /* GTAddViewController.h */,
+				5A6CA86718F4E92D0099E21E /* GTAddViewController.m */,
 				5A6CA84918F4E33A0099E21E /* Images.xcassets */,
 				5A6CA83518F4E3390099E21E /* Supporting Files */,
 			);
@@ -255,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6CA86818F4E92D0099E21E /* GTAddViewController.m in Sources */,
 				5A6CA84818F4E33A0099E21E /* GTDetailViewController.m in Sources */,
 				5A6CA84518F4E33A0099E21E /* GTMasterViewController.m in Sources */,
 				5A6CA83B18F4E3390099E21E /* main.m in Sources */,
