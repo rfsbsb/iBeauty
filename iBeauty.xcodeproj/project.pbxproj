@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A6CA82F18F4E3390099E21E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6CA82E18F4E3390099E21E /* Foundation.framework */; };
+		5A6CA83118F4E3390099E21E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6CA83018F4E3390099E21E /* CoreGraphics.framework */; };
+		5A6CA83318F4E3390099E21E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6CA83218F4E3390099E21E /* UIKit.framework */; };
+		5A6CA83918F4E3390099E21E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CA83718F4E3390099E21E /* InfoPlist.strings */; };
+		5A6CA83B18F4E3390099E21E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CA83A18F4E3390099E21E /* main.m */; };
+		5A6CA83F18F4E3390099E21E /* GTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CA83E18F4E3390099E21E /* GTAppDelegate.m */; };
+		5A6CA84218F4E3390099E21E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CA84018F4E3390099E21E /* Main.storyboard */; };
+		5A6CA84518F4E33A0099E21E /* GTMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CA84418F4E33A0099E21E /* GTMasterViewController.m */; };
+		5A6CA84818F4E33A0099E21E /* GTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CA84718F4E33A0099E21E /* GTDetailViewController.m */; };
+		5A6CA84A18F4E33A0099E21E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CA84918F4E33A0099E21E /* Images.xcassets */; };
+		5A6CA85118F4E33A0099E21E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6CA85018F4E33A0099E21E /* XCTest.framework */; };
+		5A6CA85218F4E33A0099E21E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6CA82E18F4E3390099E21E /* Foundation.framework */; };
+		5A6CA85318F4E33A0099E21E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6CA83218F4E3390099E21E /* UIKit.framework */; };
+		5A6CA85B18F4E33A0099E21E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CA85918F4E33A0099E21E /* InfoPlist.strings */; };
+		5A6CA85D18F4E33A0099E21E /* iBeautyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CA85C18F4E33A0099E21E /* iBeautyTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A6CA85418F4E33A0099E21E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A6CA82318F4E3390099E21E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A6CA82A18F4E3390099E21E;
+			remoteInfo = iBeauty;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A6CA82B18F4E3390099E21E /* iBeauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBeauty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A6CA82E18F4E3390099E21E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5A6CA83018F4E3390099E21E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5A6CA83218F4E3390099E21E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5A6CA83618F4E3390099E21E /* iBeauty-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iBeauty-Info.plist"; sourceTree = "<group>"; };
+		5A6CA83818F4E3390099E21E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5A6CA83A18F4E3390099E21E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A6CA83C18F4E3390099E21E /* iBeauty-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iBeauty-Prefix.pch"; sourceTree = "<group>"; };
+		5A6CA83D18F4E3390099E21E /* GTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTAppDelegate.h; sourceTree = "<group>"; };
+		5A6CA83E18F4E3390099E21E /* GTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTAppDelegate.m; sourceTree = "<group>"; };
+		5A6CA84118F4E3390099E21E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A6CA84318F4E3390099E21E /* GTMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMasterViewController.h; sourceTree = "<group>"; };
+		5A6CA84418F4E33A0099E21E /* GTMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTMasterViewController.m; sourceTree = "<group>"; };
+		5A6CA84618F4E33A0099E21E /* GTDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTDetailViewController.h; sourceTree = "<group>"; };
+		5A6CA84718F4E33A0099E21E /* GTDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTDetailViewController.m; sourceTree = "<group>"; };
+		5A6CA84918F4E33A0099E21E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5A6CA84F18F4E33A0099E21E /* iBeautyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBeautyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A6CA85018F4E33A0099E21E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5A6CA85818F4E33A0099E21E /* iBeautyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iBeautyTests-Info.plist"; sourceTree = "<group>"; };
+		5A6CA85A18F4E33A0099E21E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5A6CA85C18F4E33A0099E21E /* iBeautyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iBeautyTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A6CA82818F4E3390099E21E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A6CA83118F4E3390099E21E /* CoreGraphics.framework in Frameworks */,
+				5A6CA83318F4E3390099E21E /* UIKit.framework in Frameworks */,
+				5A6CA82F18F4E3390099E21E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A6CA84C18F4E33A0099E21E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A6CA85118F4E33A0099E21E /* XCTest.framework in Frameworks */,
+				5A6CA85318F4E33A0099E21E /* UIKit.framework in Frameworks */,
+				5A6CA85218F4E33A0099E21E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A6CA82218F4E3390099E21E = {
+			isa = PBXGroup;
+			children = (
+				5A6CA83418F4E3390099E21E /* iBeauty */,
+				5A6CA85618F4E33A0099E21E /* iBeautyTests */,
+				5A6CA82D18F4E3390099E21E /* Frameworks */,
+				5A6CA82C18F4E3390099E21E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A6CA82C18F4E3390099E21E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A6CA82B18F4E3390099E21E /* iBeauty.app */,
+				5A6CA84F18F4E33A0099E21E /* iBeautyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A6CA82D18F4E3390099E21E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A6CA82E18F4E3390099E21E /* Foundation.framework */,
+				5A6CA83018F4E3390099E21E /* CoreGraphics.framework */,
+				5A6CA83218F4E3390099E21E /* UIKit.framework */,
+				5A6CA85018F4E33A0099E21E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A6CA83418F4E3390099E21E /* iBeauty */ = {
+			isa = PBXGroup;
+			children = (
+				5A6CA83D18F4E3390099E21E /* GTAppDelegate.h */,
+				5A6CA83E18F4E3390099E21E /* GTAppDelegate.m */,
+				5A6CA84018F4E3390099E21E /* Main.storyboard */,
+				5A6CA84318F4E3390099E21E /* GTMasterViewController.h */,
+				5A6CA84418F4E33A0099E21E /* GTMasterViewController.m */,
+				5A6CA84618F4E33A0099E21E /* GTDetailViewController.h */,
+				5A6CA84718F4E33A0099E21E /* GTDetailViewController.m */,
+				5A6CA84918F4E33A0099E21E /* Images.xcassets */,
+				5A6CA83518F4E3390099E21E /* Supporting Files */,
+			);
+			path = iBeauty;
+			sourceTree = "<group>";
+		};
+		5A6CA83518F4E3390099E21E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A6CA83618F4E3390099E21E /* iBeauty-Info.plist */,
+				5A6CA83718F4E3390099E21E /* InfoPlist.strings */,
+				5A6CA83A18F4E3390099E21E /* main.m */,
+				5A6CA83C18F4E3390099E21E /* iBeauty-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A6CA85618F4E33A0099E21E /* iBeautyTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A6CA85C18F4E33A0099E21E /* iBeautyTests.m */,
+				5A6CA85718F4E33A0099E21E /* Supporting Files */,
+			);
+			path = iBeautyTests;
+			sourceTree = "<group>";
+		};
+		5A6CA85718F4E33A0099E21E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A6CA85818F4E33A0099E21E /* iBeautyTests-Info.plist */,
+				5A6CA85918F4E33A0099E21E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A6CA82A18F4E3390099E21E /* iBeauty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A6CA86018F4E33A0099E21E /* Build configuration list for PBXNativeTarget "iBeauty" */;
+			buildPhases = (
+				5A6CA82718F4E3390099E21E /* Sources */,
+				5A6CA82818F4E3390099E21E /* Frameworks */,
+				5A6CA82918F4E3390099E21E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iBeauty;
+			productName = iBeauty;
+			productReference = 5A6CA82B18F4E3390099E21E /* iBeauty.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A6CA84E18F4E33A0099E21E /* iBeautyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A6CA86318F4E33A0099E21E /* Build configuration list for PBXNativeTarget "iBeautyTests" */;
+			buildPhases = (
+				5A6CA84B18F4E33A0099E21E /* Sources */,
+				5A6CA84C18F4E33A0099E21E /* Frameworks */,
+				5A6CA84D18F4E33A0099E21E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A6CA85518F4E33A0099E21E /* PBXTargetDependency */,
+			);
+			name = iBeautyTests;
+			productName = iBeautyTests;
+			productReference = 5A6CA84F18F4E33A0099E21E /* iBeautyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A6CA82318F4E3390099E21E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GT;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = GroupOfTwo;
+				TargetAttributes = {
+					5A6CA84E18F4E33A0099E21E = {
+						TestTargetID = 5A6CA82A18F4E3390099E21E;
+					};
+				};
+			};
+			buildConfigurationList = 5A6CA82618F4E3390099E21E /* Build configuration list for PBXProject "iBeauty" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A6CA82218F4E3390099E21E;
+			productRefGroup = 5A6CA82C18F4E3390099E21E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A6CA82A18F4E3390099E21E /* iBeauty */,
+				5A6CA84E18F4E33A0099E21E /* iBeautyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A6CA82918F4E3390099E21E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A6CA84A18F4E33A0099E21E /* Images.xcassets in Resources */,
+				5A6CA83918F4E3390099E21E /* InfoPlist.strings in Resources */,
+				5A6CA84218F4E3390099E21E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A6CA84D18F4E33A0099E21E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A6CA85B18F4E33A0099E21E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A6CA82718F4E3390099E21E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A6CA84818F4E33A0099E21E /* GTDetailViewController.m in Sources */,
+				5A6CA84518F4E33A0099E21E /* GTMasterViewController.m in Sources */,
+				5A6CA83B18F4E3390099E21E /* main.m in Sources */,
+				5A6CA83F18F4E3390099E21E /* GTAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A6CA84B18F4E33A0099E21E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A6CA85D18F4E33A0099E21E /* iBeautyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A6CA85518F4E33A0099E21E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A6CA82A18F4E3390099E21E /* iBeauty */;
+			targetProxy = 5A6CA85418F4E33A0099E21E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A6CA83718F4E3390099E21E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A6CA83818F4E3390099E21E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5A6CA84018F4E3390099E21E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A6CA84118F4E3390099E21E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A6CA85918F4E33A0099E21E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A6CA85A18F4E33A0099E21E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A6CA85E18F4E33A0099E21E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5A6CA85F18F4E33A0099E21E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A6CA86118F4E33A0099E21E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iBeauty/iBeauty-Prefix.pch";
+				INFOPLIST_FILE = "iBeauty/iBeauty-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5A6CA86218F4E33A0099E21E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iBeauty/iBeauty-Prefix.pch";
+				INFOPLIST_FILE = "iBeauty/iBeauty-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5A6CA86418F4E33A0099E21E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iBeauty.app/iBeauty";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iBeauty/iBeauty-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iBeautyTests/iBeautyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5A6CA86518F4E33A0099E21E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iBeauty.app/iBeauty";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iBeauty/iBeauty-Prefix.pch";
+				INFOPLIST_FILE = "iBeautyTests/iBeautyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A6CA82618F4E3390099E21E /* Build configuration list for PBXProject "iBeauty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A6CA85E18F4E33A0099E21E /* Debug */,
+				5A6CA85F18F4E33A0099E21E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A6CA86018F4E33A0099E21E /* Build configuration list for PBXNativeTarget "iBeauty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A6CA86118F4E33A0099E21E /* Debug */,
+				5A6CA86218F4E33A0099E21E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5A6CA86318F4E33A0099E21E /* Build configuration list for PBXNativeTarget "iBeautyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A6CA86418F4E33A0099E21E /* Debug */,
+				5A6CA86518F4E33A0099E21E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A6CA82318F4E3390099E21E /* Project object */;
+}
