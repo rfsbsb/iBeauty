@@ -26,7 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    GTAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    self.managedObjectContext = appDelegate.managedObjectContext;
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,21 +36,38 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)addBackButton:(UIBarButtonItem *)sender {
   [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)addSaveButton:(UIBarButtonItem *)sender {
+  Product * newProduct = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:self.managedObjectContext];
+
+  newProduct.name = self.name.text;
+  newProduct.price = [NSDecimalNumber decimalNumberWithString:self.price.text];
+  newProduct.stock = [NSDecimalNumber decimalNumberWithString:self.stock.text];
+  newProduct.details = self.details.text;
+  
+  NSError *error;
+  if (![self.managedObjectContext save:&error]) {
+    NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+  }
+  
+  self.name.text = @"";
+  self.price.text = @"";
+  self.stock.text = @"";
+  self.details.text = @"";
+
+  [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)viewTouched:(UIControl *)sender {
+  [self.price resignFirstResponder];
+  [self.name resignFirstResponder];
+  [self.stock resignFirstResponder];
+  [self.details resignFirstResponder];
+}
+
+- (IBAction)inputDone:(UITextField *)sender {
+  [sender resignFirstResponder];
 }
 @end
