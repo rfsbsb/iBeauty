@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GTAddViewController : UIViewController
+- (IBAction)addBackButton:(UIBarButtonItem *)sender;
+- (IBAction)addSaveButton:(UIBarButtonItem *)sender;
 
 @end

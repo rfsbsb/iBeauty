@@ -82,8 +82,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Adicionar" id="kjT-UU-O1M">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="QPS-jf-Oix"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="HhW-lR-B5u"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="QPS-jf-Oix">
+                            <connections>
+                                <action selector="addBackButton:" destination="88K-b1-qge" id="r1J-uI-duP"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="HhW-lR-B5u">
+                            <connections>
+                                <action selector="addSaveButton:" destination="88K-b1-qge" id="fm5-Go-pKm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lkn-5m-Alj" userLabel="First Responder" sceneMemberID="firstResponder"/>

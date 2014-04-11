@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6AC6478E-2F08-4F25-A5EB-56AD1F2870F1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iBeauty</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>62B40EDD-FF34-46D4-B422-B37ADA5D2629</key>
+		<string>ssh://github.com/rfsbsb/iBeauty.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iBeauty.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>62B40EDD-FF34-46D4-B422-B37ADA5D2629</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/rfsbsb/iBeauty.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>62B40EDD-FF34-46D4-B422-B37ADA5D2629</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>62B40EDD-FF34-46D4-B422-B37ADA5D2629</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iBeauty</string>
+		</dict>
+	</array>
+</dict>
+</plist>

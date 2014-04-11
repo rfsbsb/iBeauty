@@ -23,6 +23,9 @@
 		5A6CA85B18F4E33A0099E21E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CA85918F4E33A0099E21E /* InfoPlist.strings */; };
 		5A6CA85D18F4E33A0099E21E /* iBeautyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CA85C18F4E33A0099E21E /* iBeautyTests.m */; };
 		5A6CA86818F4E92D0099E21E /* GTAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CA86718F4E92D0099E21E /* GTAddViewController.m */; };
+		5A78DEDB18F7625D003345B7 /* iBeauty.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A78DED918F7625D003345B7 /* iBeauty.xcdatamodeld */; };
+		5A78DEDD18F7627F003345B7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A78DEDC18F7627F003345B7 /* CoreData.framework */; };
+		5A78DEE018F76805003345B7 /* GTProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A78DEDF18F76805003345B7 /* GTProduct.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,10 @@
 		5A6CA85C18F4E33A0099E21E /* iBeautyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iBeautyTests.m; sourceTree = "<group>"; };
 		5A6CA86618F4E92D0099E21E /* GTAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAddViewController.h; sourceTree = "<group>"; };
 		5A6CA86718F4E92D0099E21E /* GTAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAddViewController.m; sourceTree = "<group>"; };
+		5A78DEDA18F7625D003345B7 /* iBeauty.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iBeauty.xcdatamodel; sourceTree = "<group>"; };
+		5A78DEDC18F7627F003345B7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5A78DEDE18F76805003345B7 /* GTProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTProduct.h; sourceTree = "<group>"; };
+		5A78DEDF18F76805003345B7 /* GTProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTProduct.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A78DEDD18F7627F003345B7 /* CoreData.framework in Frameworks */,
 				5A6CA83118F4E3390099E21E /* CoreGraphics.framework in Frameworks */,
 				5A6CA83318F4E3390099E21E /* UIKit.framework in Frameworks */,
 				5A6CA82F18F4E3390099E21E /* Foundation.framework in Frameworks */,
@@ -107,6 +115,7 @@
 		5A6CA82D18F4E3390099E21E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A78DEDC18F7627F003345B7 /* CoreData.framework */,
 				5A6CA82E18F4E3390099E21E /* Foundation.framework */,
 				5A6CA83018F4E3390099E21E /* CoreGraphics.framework */,
 				5A6CA83218F4E3390099E21E /* UIKit.framework */,
@@ -127,8 +136,11 @@
 				5A6CA84718F4E33A0099E21E /* GTDetailViewController.m */,
 				5A6CA86618F4E92D0099E21E /* GTAddViewController.h */,
 				5A6CA86718F4E92D0099E21E /* GTAddViewController.m */,
+				5A78DEDE18F76805003345B7 /* GTProduct.h */,
+				5A78DEDF18F76805003345B7 /* GTProduct.m */,
 				5A6CA84918F4E33A0099E21E /* Images.xcassets */,
 				5A6CA83518F4E3390099E21E /* Supporting Files */,
+				5A78DED918F7625D003345B7 /* iBeauty.xcdatamodeld */,
 			);
 			path = iBeauty;
 			sourceTree = "<group>";
@@ -263,6 +275,8 @@
 				5A6CA86818F4E92D0099E21E /* GTAddViewController.m in Sources */,
 				5A6CA84818F4E33A0099E21E /* GTDetailViewController.m in Sources */,
 				5A6CA84518F4E33A0099E21E /* GTMasterViewController.m in Sources */,
+				5A78DEDB18F7625D003345B7 /* iBeauty.xcdatamodeld in Sources */,
+				5A78DEE018F76805003345B7 /* GTProduct.m in Sources */,
 				5A6CA83B18F4E3390099E21E /* main.m in Sources */,
 				5A6CA83F18F4E3390099E21E /* GTAppDelegate.m in Sources */,
 			);
@@ -469,6 +483,7 @@
 				5A6CA86218F4E33A0099E21E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A6CA86318F4E33A0099E21E /* Build configuration list for PBXNativeTarget "iBeautyTests" */ = {
 			isa = XCConfigurationList;
@@ -477,8 +492,22 @@
 				5A6CA86518F4E33A0099E21E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5A78DED918F7625D003345B7 /* iBeauty.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5A78DEDA18F7625D003345B7 /* iBeauty.xcdatamodel */,
+			);
+			currentVersion = 5A78DEDA18F7625D003345B7 /* iBeauty.xcdatamodel */;
+			path = iBeauty.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5A6CA82318F4E3390099E21E /* Project object */;
 }
