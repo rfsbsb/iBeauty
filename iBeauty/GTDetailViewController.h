@@ -12,13 +12,15 @@
 @interface GTDetailViewController : UIViewController
 
 @property (strong, nonatomic) Product *product;
-
 @property (weak, nonatomic) IBOutlet UITextField *name;
-
 @property (weak, nonatomic) IBOutlet UITextField *price;
-
 @property (weak, nonatomic) IBOutlet UITextField *stock;
-
 @property (weak, nonatomic) IBOutlet UITextView *details;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *edit;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
+- (IBAction)editProduct:(UIBarButtonItem *)sender;
+- (IBAction)viewTouchDown:(UIControl *)sender;
+- (IBAction)inputDone:(UITextField *)sender;
+- (void) editSaveProduct;
 @end

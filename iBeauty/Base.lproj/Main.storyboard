@@ -173,7 +173,7 @@
                         <viewControllerLayoutGuide type="top" id="cIm-e0-J51"/>
                         <viewControllerLayoutGuide type="bottom" id="a0L-h9-sNL"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MMQ-IT-qOo">
+                    <view key="view" contentMode="scaleToFill" id="MMQ-IT-qOo" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -190,6 +190,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
+                                    <action selector="inputDone:" destination="Ah7-4n-0Wa" eventType="editingDidEndOnExit" id="82C-gI-T9y"/>
                                     <action selector="inputDone:" destination="88K-b1-qge" eventType="editingDidEndOnExit" id="inW-mU-NbQ"/>
                                 </connections>
                             </textField>
@@ -224,7 +225,7 @@
                                 <rect key="frame" x="20" y="234" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBO-ec-ovv">
                                 <rect key="frame" x="20" y="301" width="280" height="128"/>
@@ -235,10 +236,20 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="viewTouchDown:" destination="Ah7-4n-0Wa" eventType="touchDown" id="EDQ-zN-yqC"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Detalhes" id="cra-N8-TIN"/>
+                    <navigationItem key="navigationItem" title="Detalhes" id="cra-N8-TIN">
+                        <barButtonItem key="rightBarButtonItem" title="Editar" id="XHx-5b-wCL">
+                            <connections>
+                                <action selector="editProduct:" destination="Ah7-4n-0Wa" id="5c7-rP-eSl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="details" destination="RBO-ec-ovv" id="3jn-tG-xUN"/>
+                        <outlet property="edit" destination="XHx-5b-wCL" id="3L1-sP-BPr"/>
                         <outlet property="name" destination="vDC-zb-ySh" id="4Km-Fb-eK5"/>
                         <outlet property="price" destination="se5-68-gvw" id="F7O-PX-Sw9"/>
                         <outlet property="stock" destination="WFW-pc-gJD" id="60t-DL-WM3"/>
