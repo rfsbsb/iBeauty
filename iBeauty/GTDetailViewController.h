@@ -7,10 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Product.h"
 
 @interface GTDetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) Product *product;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UITextField *name;
+
+@property (weak, nonatomic) IBOutlet UITextField *price;
+
+@property (weak, nonatomic) IBOutlet UITextField *stock;
+
+@property (weak, nonatomic) IBOutlet UITextView *details;
+
 @end

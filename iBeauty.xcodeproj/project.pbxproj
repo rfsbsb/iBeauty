@@ -136,11 +136,11 @@
 				5A6CA84718F4E33A0099E21E /* GTDetailViewController.m */,
 				5A6CA86618F4E92D0099E21E /* GTAddViewController.h */,
 				5A6CA86718F4E92D0099E21E /* GTAddViewController.m */,
+				5A78DEE118F78153003345B7 /* Product.h */,
+				5A78DEE218F78153003345B7 /* Product.m */,
 				5A6CA84918F4E33A0099E21E /* Images.xcassets */,
 				5A6CA83518F4E3390099E21E /* Supporting Files */,
 				5A78DED918F7625D003345B7 /* iBeauty.xcdatamodeld */,
-				5A78DEE118F78153003345B7 /* Product.h */,
-				5A78DEE218F78153003345B7 /* Product.m */,
 			);
 			path = iBeauty;
 			sourceTree = "<group>";

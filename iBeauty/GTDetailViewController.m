@@ -9,37 +9,21 @@
 #import "GTDetailViewController.h"
 
 @interface GTDetailViewController ()
-- (void)configureView;
 @end
 
 @implementation GTDetailViewController
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
-{
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
-    }
-}
-
-- (void)configureView
-{
-    // Update the user interface for the detail item.
-
-  if (self.detailItem) {
-      self.detailDescriptionLabel.text = [self.detailItem description];
-  }
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-  [self configureView];
+	self.name.text = self.product.name;
+    self.price.text =  [NSString stringWithFormat: @"%@", self.product.price];
+    self.stock.text = [NSString stringWithFormat: @"%@", self.product.stock];
+    self.details.text = self.product.details;
+    
 }
 
 - (void)didReceiveMemoryWarning
