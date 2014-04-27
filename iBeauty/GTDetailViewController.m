@@ -23,7 +23,9 @@
     self.price.text =  [NSString stringWithFormat: @"%@", self.product.price];
     self.stock.text = [NSString stringWithFormat: @"%@", self.product.stock];
     self.details.text = self.product.details;
-    
+    GTAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    self.managedObjectContext = appDelegate.managedObjectContext;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,16 +68,11 @@
     self.product.price = [NSDecimalNumber decimalNumberWithString:self.price.text];
     self.product.stock = [NSDecimalNumber decimalNumberWithString:self.stock.text];
     self.product.details = self.details.text;
-    
-    NSLog(@"Nome = %@", self.product.name);
-    [self.managedObjectContext insertObject:self.product];
-    
-    NSError *error;
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+        
+    NSError *upError;
+    if (![self.managedObjectContext save:&upError]) {
+        NSLog(@"Whoops, couldn't update: %@", [upError localizedDescription]);
     }
-
-    
     self.name.text = @"";
     self.price.text = @"";
     self.stock.text = @"";

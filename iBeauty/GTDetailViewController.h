@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Product.h"
+#import "GTAppDelegate.h"
 
 @interface GTDetailViewController : UIViewController
 
