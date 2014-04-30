@@ -25,7 +25,8 @@
 		5A6CA86818F4E92D0099E21E /* GTAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CA86718F4E92D0099E21E /* GTAddViewController.m */; };
 		5A78DEDB18F7625D003345B7 /* iBeauty.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A78DED918F7625D003345B7 /* iBeauty.xcdatamodeld */; };
 		5A78DEDD18F7627F003345B7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A78DEDC18F7627F003345B7 /* CoreData.framework */; };
-		5A78DEE318F78153003345B7 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A78DEE218F78153003345B7 /* Product.m */; };
+		6B96BC2C190F26280086B562 /* GTImageSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B96BC2B190F26280086B562 /* GTImageSaver.m */; };
+		6B96BC2F190F29120086B562 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B96BC2E190F29120086B562 /* Product.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +65,11 @@
 		5A6CA86718F4E92D0099E21E /* GTAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAddViewController.m; sourceTree = "<group>"; };
 		5A78DEDA18F7625D003345B7 /* iBeauty.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iBeauty.xcdatamodel; sourceTree = "<group>"; };
 		5A78DEDC18F7627F003345B7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		5A78DEE118F78153003345B7 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
-		5A78DEE218F78153003345B7 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		6B96BC2A190F26280086B562 /* GTImageSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTImageSaver.h; sourceTree = "<group>"; };
+		6B96BC2B190F26280086B562 /* GTImageSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTImageSaver.m; sourceTree = "<group>"; };
+		6B96BC2D190F29120086B562 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		6B96BC2E190F29120086B562 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		6B96BC30190F2B770086B562 /* iBeauty 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "iBeauty 2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,11 +140,13 @@
 				5A6CA84718F4E33A0099E21E /* GTDetailViewController.m */,
 				5A6CA86618F4E92D0099E21E /* GTAddViewController.h */,
 				5A6CA86718F4E92D0099E21E /* GTAddViewController.m */,
-				5A78DEE118F78153003345B7 /* Product.h */,
-				5A78DEE218F78153003345B7 /* Product.m */,
 				5A6CA84918F4E33A0099E21E /* Images.xcassets */,
 				5A6CA83518F4E3390099E21E /* Supporting Files */,
 				5A78DED918F7625D003345B7 /* iBeauty.xcdatamodeld */,
+				6B96BC2D190F29120086B562 /* Product.h */,
+				6B96BC2E190F29120086B562 /* Product.m */,
+				6B96BC2A190F26280086B562 /* GTImageSaver.h */,
+				6B96BC2B190F26280086B562 /* GTImageSaver.m */,
 			);
 			path = iBeauty;
 			sourceTree = "<group>";
@@ -272,11 +278,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B96BC2C190F26280086B562 /* GTImageSaver.m in Sources */,
 				5A6CA86818F4E92D0099E21E /* GTAddViewController.m in Sources */,
 				5A6CA84818F4E33A0099E21E /* GTDetailViewController.m in Sources */,
 				5A6CA84518F4E33A0099E21E /* GTMasterViewController.m in Sources */,
 				5A78DEDB18F7625D003345B7 /* iBeauty.xcdatamodeld in Sources */,
-				5A78DEE318F78153003345B7 /* Product.m in Sources */,
+				6B96BC2F190F29120086B562 /* Product.m in Sources */,
 				5A6CA83B18F4E3390099E21E /* main.m in Sources */,
 				5A6CA83F18F4E3390099E21E /* GTAppDelegate.m in Sources */,
 			);
@@ -500,9 +507,10 @@
 		5A78DED918F7625D003345B7 /* iBeauty.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				6B96BC30190F2B770086B562 /* iBeauty 2.xcdatamodel */,
 				5A78DEDA18F7625D003345B7 /* iBeauty.xcdatamodel */,
 			);
-			currentVersion = 5A78DEDA18F7625D003345B7 /* iBeauty.xcdatamodel */;
+			currentVersion = 6B96BC30190F2B770086B562 /* iBeauty 2.xcdatamodel */;
 			path = iBeauty.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

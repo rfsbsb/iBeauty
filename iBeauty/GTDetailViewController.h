@@ -19,9 +19,17 @@
 @property (weak, nonatomic) IBOutlet UITextView *details;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *edit;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (weak, nonatomic) IBOutlet UIImageView *productImage;
+@property (weak, nonatomic) IBOutlet UILabel *txtImage;
+
 
 - (IBAction)editProduct:(UIBarButtonItem *)sender;
 - (IBAction)viewTouchDown:(UIControl *)sender;
 - (IBAction)inputDone:(UITextField *)sender;
 - (void) editSaveProduct;
+
+- (IBAction)takePicture:(UITapGestureRecognizer *)sender;
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex;
+
 @end

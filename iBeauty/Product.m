@@ -2,7 +2,7 @@
 //  Product.m
 //  iBeauty
 //
-//  Created by Rafael Ferreira Silva on 10/04/14.
+//  Created by Ricardo Alexandre Franco da Cruz on 28/04/14.
 //  Copyright (c) 2014 GroupOfTwo. All rights reserved.
 //
 
@@ -11,9 +11,10 @@
 
 @implementation Product
 
-@dynamic name;
 @dynamic details;
+@dynamic name;
 @dynamic price;
 @dynamic stock;
+@dynamic image;
 
 @end

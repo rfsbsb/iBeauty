@@ -2,9 +2,7 @@
 //  Product.h
 //  iBeauty
 //
-//  Classe do modelo de dados.
-//
-//  Created by Rafael Ferreira Silva on 10/04/14.
+//  Created by Ricardo Alexandre Franco da Cruz on 28/04/14.
 //  Copyright (c) 2014 GroupOfTwo. All rights reserved.
 //
 
@@ -14,9 +12,10 @@
 
 @interface Product : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * details;
+@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * price;
 @property (nonatomic, retain) NSNumber * stock;
+@property (nonatomic, retain) NSString * image;
 
 @end
