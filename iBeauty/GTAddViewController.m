@@ -7,8 +7,9 @@
 //
 
 #import "GTAddViewController.h"
+#import "GTImageSaver.h"
 
-@interface GTAddViewController ()
+@interface GTAddViewController () <UIGestureRecognizerDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
 
@@ -41,24 +42,29 @@
 }
 
 - (IBAction)addSaveButton:(UIBarButtonItem *)sender {
-  Product * newProduct = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:self.managedObjectContext];
+    Product * newProduct = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:self.managedObjectContext];
 
-  newProduct.name = self.name.text;
-  newProduct.price = [NSDecimalNumber decimalNumberWithString:self.price.text];
-  newProduct.stock = [NSDecimalNumber decimalNumberWithString:self.stock.text];
-  newProduct.details = self.details.text;
+    newProduct.name = self.name.text;
+    newProduct.price = [NSDecimalNumber decimalNumberWithString:self.price.text];
+    newProduct.stock = [NSDecimalNumber decimalNumberWithString:self.stock.text];
+    newProduct.details = self.details.text;
+    
+    // 1. Save the image
+	if ([GTImageSaver saveImageToDisk:self.productImage.image andToProduct:newProduct]) {
+		[self setImageForProduct:self.productImage.image];
+	}
+    
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
   
-  NSError *error;
-  if (![self.managedObjectContext save:&error]) {
-    NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-  }
-  
-  self.name.text = @"";
-  self.price.text = @"";
-  self.stock.text = @"";
-  self.details.text = @"";
+    self.name.text = @"";
+    self.price.text = @"";
+    self.stock.text = @"";
+    self.details.text = @"";
 
-  [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)viewTouched:(UIControl *)sender {
   [self.price resignFirstResponder];
@@ -70,4 +76,59 @@
 - (IBAction)inputDone:(UITextField *)sender {
   [sender resignFirstResponder];
 }
+
+- (IBAction)takePicture:(UITapGestureRecognizer *)sender
+{
+    UIActionSheet *sheet;
+	sheet = [[UIActionSheet alloc] initWithTitle:@"Escolha a Foto"
+										delegate:self
+							   cancelButtonTitle:@"Cancelar"
+						  destructiveButtonTitle:nil
+							   otherButtonTitles:@"Tirar Foto", @"Escolher Foto", nil];
+	
+	[sheet showInView:self.navigationController.view];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+	[picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+	UIImage *image = info[UIImagePickerControllerOriginalImage];
+	
+    [self setImageForProduct:image];
+	[picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)setImageForProduct:(UIImage*)img {
+	self.productImage.image		   = img;
+	self.productImage.backgroundColor = [UIColor clearColor];
+	self.txtImage.hidden	   = YES;
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+	imagePicker.delegate = self;
+	switch (buttonIndex) {
+		case 0: {
+			if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+				imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+				[self presentViewController:imagePicker animated:YES completion:nil];
+			}
+		}
+			break;
+		case 1: {
+			imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+			[self presentViewController:imagePicker animated:YES completion:nil];
+		}
+			break;
+		default:
+			break;
+	}
+    
+}
+
+
 @end

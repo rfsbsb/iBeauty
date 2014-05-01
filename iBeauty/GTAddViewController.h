@@ -18,8 +18,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *price;
 @property (weak, nonatomic) IBOutlet UITextField *stock;
 @property (weak, nonatomic) IBOutlet UITextView *details;
+@property (weak, nonatomic) IBOutlet UIImageView *productImage;
+@property (weak, nonatomic) IBOutlet UITextView *txtImage;
+
 - (IBAction)viewTouched:(UIControl *)sender;
 - (IBAction)inputDone:(UITextField *)sender;
-
+- (IBAction)takePicture:(UITapGestureRecognizer *)sender;
 
 @end

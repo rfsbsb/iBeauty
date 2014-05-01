@@ -125,7 +125,6 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-	// 1. Grab image and save to disk
 	UIImage *image = info[UIImagePickerControllerOriginalImage];
 	
     [self setImageForProduct:image];
