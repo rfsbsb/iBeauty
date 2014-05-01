@@ -264,6 +264,9 @@
                                 <state key="normal" title="Vender">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sellProduct:" destination="Ah7-4n-0Wa" eventType="touchUpInside" id="21O-98-3zW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -279,6 +282,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btSell" destination="UWx-ie-T5G" id="s07-T5-Pxs"/>
                         <outlet property="details" destination="RBO-ec-ovv" id="3jn-tG-xUN"/>
                         <outlet property="edit" destination="XHx-5b-wCL" id="3L1-sP-BPr"/>
                         <outlet property="name" destination="vDC-zb-ySh" id="4Km-Fb-eK5"/>

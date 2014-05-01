@@ -50,9 +50,11 @@
     newProduct.details = self.details.text;
     
     // 1. Save the image
-	if ([GTImageSaver saveImageToDisk:self.productImage.image andToProduct:newProduct]) {
-		[self setImageForProduct:self.productImage.image];
-	}
+    if (self.productImage.image) {
+        if ([GTImageSaver saveImageToDisk:self.productImage.image andToProduct:newProduct]) {
+            [self setImageForProduct:self.productImage.image];
+        }
+    }
     
     NSError *error;
     if (![self.managedObjectContext save:&error]) {

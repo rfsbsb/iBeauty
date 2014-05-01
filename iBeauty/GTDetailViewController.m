@@ -8,6 +8,7 @@
 
 #import "GTDetailViewController.h"
 #import "GTImageSaver.h"
+#import "GTStockManager.h"
 
 @interface GTDetailViewController ()<UIGestureRecognizerDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -59,6 +60,7 @@
     [self.productImage setHidden:NO];
     [self.productImage setUserInteractionEnabled:YES];
     [self.edit setAction:@selector(editSaveProduct)];
+    [self.btSell setHidden:TRUE];
 }
 
 - (IBAction)viewTouchDown:(UIControl *)sender
@@ -86,13 +88,11 @@
     // 1. Remove old image if present
 	if (self.product.image) {
 		[GTImageSaver deleteImageAtPath:self.product.image];
+        // 2. Save the image
+        if ([GTImageSaver saveImageToDisk:self.productImage.image andToProduct:self.product]) {
+            [self setImageForProduct:self.productImage.image];
+        }
 	}
-
-    // 2. Save the image
-	if ([GTImageSaver saveImageToDisk:self.productImage.image andToProduct:self.product]) {
-		[self setImageForProduct:self.productImage.image];
-	}
-
     
     NSError *upError;
     if (![self.managedObjectContext save:&upError]) {
@@ -159,6 +159,15 @@
 			break;
 	}
 
+}
+
+- (IBAction)sellProduct:(UIButton *)sender
+{
+    if([GTStockManager decreaseProduct:self.product withContext:self.managedObjectContext])
+    {
+        NSLog(@"Estoque atualizado");
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

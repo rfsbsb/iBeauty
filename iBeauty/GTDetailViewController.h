@@ -21,6 +21,7 @@
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (weak, nonatomic) IBOutlet UIImageView *productImage;
 @property (weak, nonatomic) IBOutlet UILabel *txtImage;
+@property (weak, nonatomic) IBOutlet UIButton *btSell;
 
 
 - (IBAction)editProduct:(UIBarButtonItem *)sender;
@@ -31,5 +32,6 @@
 - (IBAction)takePicture:(UITapGestureRecognizer *)sender;
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex;
+- (IBAction)sellProduct:(UIButton *)sender;
 
 @end
