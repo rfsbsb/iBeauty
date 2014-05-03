@@ -10,7 +10,11 @@
 #import <CoreData/CoreData.h>
 #import "GTAppDelegate.h"
 #import "Product.h"
+#import "GTImageSaver.h"
 
 @interface GTMasterViewController : UITableViewController
+
+@property (nonatomic) NSMutableArray * products;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end

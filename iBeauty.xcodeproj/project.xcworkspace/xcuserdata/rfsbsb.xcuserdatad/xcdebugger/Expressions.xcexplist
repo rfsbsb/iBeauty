@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[GTMasterViewController tableView:commitEditingStyle:forRowAtIndexPath:]:GTMasterViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.products">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[GTAddViewController addSaveButton:]:GTAddViewController.m">
          <PersistentStrings>
             <PersistentString

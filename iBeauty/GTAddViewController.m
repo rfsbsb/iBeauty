@@ -17,24 +17,24 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+    // Custom initialization
+  }
+  return self;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    GTAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
-    self.managedObjectContext = appDelegate.managedObjectContext;
+  [super viewDidLoad];
+  GTAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+  self.managedObjectContext = appDelegate.managedObjectContext;
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
+  // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)addBackButton:(UIBarButtonItem *)sender {
@@ -42,31 +42,31 @@
 }
 
 - (IBAction)addSaveButton:(UIBarButtonItem *)sender {
-    Product * newProduct = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:self.managedObjectContext];
-
-    newProduct.name = self.name.text;
-    newProduct.price = [NSDecimalNumber decimalNumberWithString:self.price.text];
-    newProduct.stock = [NSDecimalNumber decimalNumberWithString:self.stock.text];
-    newProduct.details = self.details.text;
-    
-    // 1. Save the image
-    if (self.productImage.image) {
-        if ([GTImageSaver saveImageToDisk:self.productImage.image andToProduct:newProduct]) {
-            [self setImageForProduct:self.productImage.image];
-        }
-    }
-    
-    NSError *error;
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-    }
+  Product * newProduct = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:self.managedObjectContext];
   
-    self.name.text = @"";
-    self.price.text = @"";
-    self.stock.text = @"";
-    self.details.text = @"";
-
-    [self.navigationController popViewControllerAnimated:YES];
+  newProduct.name = self.name.text;
+  newProduct.price = [NSDecimalNumber decimalNumberWithString:self.price.text];
+  newProduct.stock = [NSDecimalNumber decimalNumberWithString:self.stock.text];
+  newProduct.details = self.details.text;
+  
+  // 1. Save the image
+  if (self.productImage.image) {
+    if ([GTImageSaver saveImageToDisk:self.productImage.image andToProduct:newProduct]) {
+      [self setImageForProduct:self.productImage.image];
+    }
+  }
+  
+  NSError *error;
+  if (![self.managedObjectContext save:&error]) {
+    NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+  }
+  
+  self.name.text = @"";
+  self.price.text = @"";
+  self.stock.text = @"";
+  self.details.text = @"";
+  
+  [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)viewTouched:(UIControl *)sender {
   [self.price resignFirstResponder];
@@ -81,15 +81,15 @@
 
 - (IBAction)takePicture:(UITapGestureRecognizer *)sender
 {
-    UIActionSheet *sheet;
+  UIActionSheet *sheet;
 	sheet = [[UIActionSheet alloc] initWithTitle:@"Escolha a Foto"
-										delegate:self
-							   cancelButtonTitle:@"Cancelar"
-						  destructiveButtonTitle:nil
-							   otherButtonTitles:@"Tirar Foto", @"Escolher Foto", nil];
+                                      delegate:self
+                             cancelButtonTitle:@"Cancelar"
+                        destructiveButtonTitle:nil
+                             otherButtonTitles:@"Tirar Foto", @"Escolher Foto", nil];
 	
 	[sheet showInView:self.navigationController.view];
-    
+  
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -97,21 +97,20 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-	UIImage *image = info[UIImagePickerControllerOriginalImage];
+  UIImage *image = info[UIImagePickerControllerOriginalImage];
 	
-    [self setImageForProduct:image];
-	[picker dismissViewControllerAnimated:YES completion:nil];
+  [self setImageForProduct:image];
+  [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)setImageForProduct:(UIImage*)img {
 	self.productImage.image		   = img;
 	self.productImage.backgroundColor = [UIColor clearColor];
-	self.txtImage.hidden	   = YES;
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+  UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
 	imagePicker.delegate = self;
 	switch (buttonIndex) {
 		case 0: {
@@ -129,7 +128,7 @@
 		default:
 			break;
 	}
-    
+  
 }
 
 
