@@ -21,24 +21,23 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	self.name.text = self.product.name;
-    self.price.text =  [NSString stringWithFormat: @"%@", self.product.price];
-    self.stock.text = [NSString stringWithFormat: @"%@", self.product.stock];
-    self.details.text = self.product.details;
-    [self.productImage setUserInteractionEnabled:NO];
-    //self.txtImage.hidden	   = YES;
-    
-    ;
-    // If there is an image in the object, show it.
-	if ([self.product.image length] > 0) {
-		// Image setup
-		NSData *imgData = [NSData dataWithContentsOfFile:[NSHomeDirectory() stringByAppendingPathComponent:self.product.image]];
-		[self setImageForProduct:[UIImage imageWithData:imgData]];
-	}
-    
-    GTAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
-    self.managedObjectContext = appDelegate.managedObjectContext;
+  [super viewDidLoad];
+  self.name.text = self.product.name;
+  self.price.text =  [NSString stringWithFormat: @"%@", self.product.price];
+  self.stock.text = [NSString stringWithFormat: @"%@", self.product.stock];
+  self.details.text = self.product.details;
+  [self.txtImage setHidden:TRUE];
+  [self.productImage setUserInteractionEnabled:NO];
+
+  // If there is an image in the object, show it.
+  if ([self.product.image length] > 0) {
+    // Image setup
+    NSData *imgData = [NSData dataWithContentsOfFile:[NSHomeDirectory() stringByAppendingPathComponent:self.product.image]];
+    [self setImageForProduct:[UIImage imageWithData:imgData]];
+  }
+
+  GTAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+  self.managedObjectContext = appDelegate.managedObjectContext;
 
 }
 
@@ -60,6 +59,10 @@
     [self.productImage setHidden:NO];
     [self.productImage setUserInteractionEnabled:YES];
     [self.edit setAction:@selector(editSaveProduct)];
+    if ([self.product.image length] > 0) {
+      self.txtImage.text = @"Editar imagem";
+    }
+    [self.txtImage setHidden:FALSE];
     [self.btSell setHidden:TRUE];
 }
 
@@ -86,22 +89,19 @@
     self.product.details = self.details.text;
     
     // 1. Remove old image if present
-	if (self.product.image) {
-		[GTImageSaver deleteImageAtPath:self.product.image];
-        // 2. Save the image
-        if ([GTImageSaver saveImageToDisk:self.productImage.image andToProduct:self.product]) {
-            [self setImageForProduct:self.productImage.image];
-        }
-	}
+    if (self.product.image) {
+      [GTImageSaver deleteImageAtPath:self.product.image];
+    }
+    // 2. Save the image
+    if ([GTImageSaver saveImageToDisk:self.productImage.image andToProduct:self.product]) {
+        [self setImageForProduct:self.productImage.image];
+    }
+  
     
     NSError *upError;
     if (![self.managedObjectContext save:&upError]) {
         NSLog(@"Whoops, couldn't update: %@", [upError localizedDescription]);
     }
-    self.name.text = @"";
-    self.price.text = @"";
-    self.stock.text = @"";
-    self.details.text = @"";
     
     [self.navigationController popViewControllerAnimated:YES];
 

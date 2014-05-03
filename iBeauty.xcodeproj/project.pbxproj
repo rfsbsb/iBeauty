@@ -25,6 +25,7 @@
 		5A6CA86818F4E92D0099E21E /* GTAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CA86718F4E92D0099E21E /* GTAddViewController.m */; };
 		5A78DEDB18F7625D003345B7 /* iBeauty.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A78DED918F7625D003345B7 /* iBeauty.xcdatamodeld */; };
 		5A78DEDD18F7627F003345B7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A78DEDC18F7627F003345B7 /* CoreData.framework */; };
+		5AEED1A4191545E900D9E992 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEED1A3191545E900D9E992 /* placeholder.png */; };
 		6B96BC2C190F26280086B562 /* GTImageSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B96BC2B190F26280086B562 /* GTImageSaver.m */; };
 		6B96BC2F190F29120086B562 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B96BC2E190F29120086B562 /* Product.m */; };
 		6B96BC33191281670086B562 /* GTStockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B96BC32191281670086B562 /* GTStockManager.m */; };
@@ -66,6 +67,7 @@
 		5A6CA86718F4E92D0099E21E /* GTAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAddViewController.m; sourceTree = "<group>"; };
 		5A78DEDA18F7625D003345B7 /* iBeauty.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iBeauty.xcdatamodel; sourceTree = "<group>"; };
 		5A78DEDC18F7627F003345B7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5AEED1A3191545E900D9E992 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		6B96BC2A190F26280086B562 /* GTImageSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTImageSaver.h; sourceTree = "<group>"; };
 		6B96BC2B190F26280086B562 /* GTImageSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTImageSaver.m; sourceTree = "<group>"; };
 		6B96BC2D190F29120086B562 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		5A6CA83518F4E3390099E21E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5AEED1A3191545E900D9E992 /* placeholder.png */,
 				5A6CA83618F4E3390099E21E /* iBeauty-Info.plist */,
 				5A6CA83718F4E3390099E21E /* InfoPlist.strings */,
 				5A6CA83A18F4E3390099E21E /* main.m */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6CA84A18F4E33A0099E21E /* Images.xcassets in Resources */,
+				5AEED1A4191545E900D9E992 /* placeholder.png in Resources */,
 				5A6CA83918F4E3390099E21E /* InfoPlist.strings in Resources */,
 				5A6CA84218F4E3390099E21E /* Main.storyboard in Resources */,
 			);

@@ -55,7 +55,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     Product *product = _products[indexPath.row];
+    // If there is an image in the object, show it.
+    if ([product.image length] > 0) {
+      // Image setup
+      NSData *imgData = [NSData dataWithContentsOfFile:[NSHomeDirectory() stringByAppendingPathComponent:product.image]];
+      cell.imageView.image = [UIImage imageWithData:imgData];
+    }
     cell.textLabel.text = product.name;
+    cell.detailTextLabel.text = [[NSString alloc] initWithFormat:@"Estoque: %@. Preço: R$ %@", product.stock, product.price];
     return cell;
 }
 
