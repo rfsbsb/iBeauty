@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[GTAddViewController addSaveButton:]:GTAddViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.productImage.image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[GTMasterViewController tableView:commitEditingStyle:forRowAtIndexPath:]:GTMasterViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -11,10 +19,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[GTAddViewController addSaveButton:]:GTAddViewController.m">
+         contextName = "-[GTAddViewController validateProduct:]:GTAddViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.productImage.image">
+               value = "product.stock">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[GTAddViewController validateData]:GTAddViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.stock.text  isEqual:@&quot;&quot;]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

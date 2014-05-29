@@ -42,31 +42,36 @@
 }
 
 - (IBAction)addSaveButton:(UIBarButtonItem *)sender {
-  Product * newProduct = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:self.managedObjectContext];
+  if ([self validateData]) {
+    Product * newProduct = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:self.managedObjectContext];
+    
+    newProduct.name = self.name.text;
+    newProduct.price = [NSDecimalNumber decimalNumberWithString:self.price.text];
+    newProduct.stock = [NSDecimalNumber decimalNumberWithString:self.stock.text];
+    newProduct.details = self.details.text;
   
-  newProduct.name = self.name.text;
-  newProduct.price = [NSDecimalNumber decimalNumberWithString:self.price.text];
-  newProduct.stock = [NSDecimalNumber decimalNumberWithString:self.stock.text];
-  newProduct.details = self.details.text;
-  
-  // 1. Save the image
-  if (self.productImage.image) {
-    if ([GTImageSaver saveImageToDisk:self.productImage.image andToProduct:newProduct]) {
-      [self setImageForProduct:self.productImage.image];
+
+    // 1. Save the image
+    if (self.productImage.image) {
+      if ([GTImageSaver saveImageToDisk:self.productImage.image andToProduct:newProduct]) {
+        [self setImageForProduct:self.productImage.image];
+      }
     }
+    
+
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+      NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+    self.name.text = @"";
+    self.price.text = @"";
+    self.stock.text = @"";
+    self.details.text = @"";
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
   }
-  
-  NSError *error;
-  if (![self.managedObjectContext save:&error]) {
-    NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-  }
-  
-  self.name.text = @"";
-  self.price.text = @"";
-  self.stock.text = @"";
-  self.details.text = @"";
-  
-  [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)viewTouched:(UIControl *)sender {
   [self.price resignFirstResponder];
@@ -129,6 +134,34 @@
 			break;
 	}
   
+}
+
+- (BOOL) validateData {
+  if (![self.stock.text intValue]) {
+    [[[UIAlertView alloc] initWithTitle:@"Aviso"
+                              message:@"Você deve informar um valor para o estoque"
+                             delegate:nil
+                    cancelButtonTitle:@"OK"
+                    otherButtonTitles: nil] show];
+    return FALSE;
+  }
+  if (![self.price.text intValue]) {
+    [[[UIAlertView alloc] initWithTitle:@"Aviso"
+                                message:@"Você deve informar um preço"
+                               delegate:nil
+                      cancelButtonTitle:@"OK"
+                      otherButtonTitles: nil] show];
+    return FALSE;
+  }
+  if ([self.name.text isEqualToString:@""]) {
+    [[[UIAlertView alloc] initWithTitle:@"Aviso"
+                                message:@"Você deve informar um nome para o produto"
+                               delegate:nil
+                      cancelButtonTitle:@"OK"
+                      otherButtonTitles: nil] show];
+    return FALSE;
+  }
+  return TRUE;
 }
 
 
